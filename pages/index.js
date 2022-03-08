@@ -1,209 +1,142 @@
+import {
+    Box,
+    Button,
+    Container,
+    Divider,
+    Heading,
+    Link,
+    List,
+    ListIcon,
+    ListItem,
+    SimpleGrid,
+    Text,
+    useColorModeValue
+} from '@chakra-ui/react'
 import Head from 'next/head'
+import { 
+    GridItem, 
+    ProfilePhoto, 
+    Row, 
+    Header1, 
+    Header2, 
+    ScrollTopButton 
+} from './../components'
+import {
+    FaDownload,
+    FaGithub,
+    FaGoogle,
+    FaLinkedin,
+    FaTwitter
+} from 'react-icons/fa'
+
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <>
+            <Head>
+                <meta name="viewport" content="width=device-width initial-scale=1"/>
+                <meta name="description" content="Portafolio personal."/>
+                <meta charSet="UTF-8" />
+                <title>Luis Arturo Rodríguez | Jr Web Developer</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <Container maxW="container.lg" >
+                <Box display={{ md: 'flex' }} mb={6}>
+                    <ProfilePhoto align="center" order={2}/>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+                    <Box flexGrow={1} order={1}>
+                        <Heading fontSize={{ base: 30, md: 35, xl: 40 }} fontWeight={200} mt={{ base: 4, md: 6 }} mb={0} pb={0}>Hola, soy</Heading>
+                        {/* <Heading as="h1" size="2xl" fontWeight={500} mt={2} mb={2}>
+                            Luis Arturo Rodr&iacute;guez
+                        </Heading> */}
+                        <Header1 mt={2} mb={2}>Luis Arturo Rodr&iacute;guez</Header1>
+                        <Text fontWeight={600} fontSize={{ base: 17, md: 20 }}>
+                            Jr. Web Developer
+                        </Text>
+                        <Text>
+                            Desarrollador web, en proceso de aprendizaje con <b>NextJS</b>. Un poco de experiencia previa en PHP. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aunque estuve alejado de la programación un tiempo, aprendo con rapidez nuevos conocimientos.
+                        </Text>
+                        <Link _hover={{ textDecoration: 'unset' }} href="/">
+                            <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
+                                <Text>Download Resume</Text>
+                            </Button>
+                        </Link>
+                    </Box>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                    
+                </Box>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                <Box>
+                    {/* <Heading as="h2" size="xl" fontWeight={500}><a name="proyectos">Proyectos</a></Heading> */}
+                    <Header2><a name="proyectos">Proyectos</a></Header2>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                    <SimpleGrid columns={[1, 2, 3]} gap={6}>
+                        <GridItem href="#" thumbnail="/cv.svg" title="Portfolio personal">
+                            Plantilla creada con React + NextJS + Chakra UI + Emotion + Framer Motion.
+                        </GridItem>
+                        <GridItem href="https://github.com/rguezque/adventure-game-basic-tutorial" thumbnail="/game.svg" title="Adventure Game">
+                            Demo b&aacute;sico de un juego 2D de aventura hecho con JS.
+                        </GridItem>
+                        <GridItem href="https://github.com/rguezque/mozilla-theme-for-typora" thumbnail="/theme-typora.svg" title="Tema Mozilla para Typora">
+                            Tema claro basado en el diseño de la web de Mozilla Developer.
+                        </GridItem>
+                        <GridItem href="https://github.com/rguezque/route" thumbnail="/route.svg" title="Route">
+                            Un router PHP hecho como una pr&aacute;ctica personal.
+                        </GridItem>
+                    </SimpleGrid>
+                </Box>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                <Box>
+                    {/* <Heading as="h2" size="xl" fontWeight={500}><a name="experiencia">Experiencia</a></Heading> */}
+                    <Header2><a name="experiencia">Experiencia</a></Header2>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+                    <Row enterpriseName="Crehana Education" jobDuration="Sep 2021 - Ene 2022">
+                        <b>Sales Agent</b>. Asesoría y gestión a alumnos de las membresías. Promoción y venta de los planes anuales mediante llamadas telefónicas (Call Center).
+                    </Row>
+                    <Divider />
+                    <Row enterpriseName="Universidad Ju&aacute;rez Aut&oacute;noma de Tabasco" jobDuration="Feb 2019 - Sep 2020">
+                        <b>Profesor de asignatura</b>. Clases presenciales en materias de programación y desarrollo web, asesorías a alumnos. Colaborador en desarrollo de pequeños sistemas de información locales.
+                    </Row>
+                    <Divider />
+                    <Row enterpriseName="SIASOFT" jobDuration="Sep 2021 - Ene 2022">
+                        <b>Desarrollo Web</b>. Visitas a PyMEs para promoción de servicios de soporte informático y desarrollo de sitios web, así como sistemas contables.
+                    </Row>
+                    <Divider />
+                    <Row enterpriseName="Universidad Polit&eacute;cnica Mesoamericana" jobDuration="Sep 2013 - May 2014">
+                    <b>Profesor de asignatura</b>. Clases presenciales en materias de programación en la modalidad escolarizada y semi-escolarizada a alumnos de M&eacute;xico y Guatemala.
+                    </Row>
+                </Box>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                <Box>
+                    {/* <Heading as="h2" size="xl" fontWeight={500}><a name="contacto">Contacto</a></Heading> */}
+                    <Header2><a name="contacto">Contacto</a></Header2>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                    <List spacing={3}>
+                        <ListItem>
+                            <ListIcon as={FaGoogle} />
+                            <Link href="mailto:rguezque@gmail.com" title="Click to send email">rguezque@gmail.com</Link>
+                        </ListItem>
+                        <ListItem>
+                            <ListIcon as={FaGithub} />
+                            <Link isExternal href="https://www.github.com/rguezque">github.com/rguezque</Link>
+                        </ListItem>
+                        <ListItem>
+                            <ListIcon as={FaLinkedin} />
+                            <Link isExternal href="https://www.linkedin.com/in/rguezque">linkedin.com/in/rguezque</Link>
+                        </ListItem>
+                        <ListItem>
+                            <ListIcon as={FaTwitter} />
+                            <Link isExternal href="https://www.twitter.com/rguezque">twitter.com/rguezque</Link>
+                        </ListItem>
+                    </List>
+                </Box>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+                <Box align="center">
+                    <ScrollTopButton />
+                </Box>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+            </Container>
+        </>
+    )
 }
