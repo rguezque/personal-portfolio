@@ -28,6 +28,7 @@ import {
     FaLinkedin,
     FaTwitter
 } from 'react-icons/fa'
+import sections from './../components/lib/sections'
 
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width initial-scale=1"/>
                 <meta name="description" content="Portafolio personal."/>
                 <meta charSet="UTF-8" />
-                <title>Luis Arturo Rodríguez | Jr Web Developer</title>
+                <title>Luis Arturo Rodríguez | Web Developer</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -47,15 +48,12 @@ export default function Home() {
 
                     <Box flexGrow={1} order={1}>
                         <Heading fontSize={{ base: 30, md: 35, xl: 40 }} fontWeight={200} mt={{ base: 4, md: 6 }} mb={0} pb={0}>Hola, soy</Heading>
-                        {/* <Heading as="h1" size="2xl" fontWeight={500} mt={2} mb={2}>
-                            Luis Arturo Rodr&iacute;guez
-                        </Heading> */}
                         <Header1 mt={2} mb={2}>Luis Arturo Rodr&iacute;guez</Header1>
                         <Text fontWeight={600} fontSize={{ base: 17, md: 20 }}>
-                            Jr. Web Developer
+                            Web Developer
                         </Text>
                         <Text>
-                            Desarrollador web, en proceso de aprendizaje con <b>NextJS</b>. Un poco de experiencia previa en PHP. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aunque estuve alejado de la programación un tiempo, aprendo con rapidez nuevos conocimientos.
+                            Desarrollador web, en proceso de aprendizaje con <b>Next.js</b>. Experiencia previa en <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aunque estuve alejado de la programación un tiempo, aprendo con rapidez nuevos conocimientos.
                         </Text>
                         <Link _hover={{ textDecoration: 'unset' }} href="/">
                             <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
@@ -63,20 +61,21 @@ export default function Home() {
                             </Button>
                         </Link>
                     </Box>
-
                     
                 </Box>
 
                 <Box>
-                    {/* <Heading as="h2" size="xl" fontWeight={500}><a name="proyectos">Proyectos</a></Heading> */}
-                    <Header2><a name="proyectos">Proyectos</a></Header2>
+                    <Header2><a id={sections.proyectos.name}>{sections.proyectos.title}</a></Header2>
 
                     <SimpleGrid columns={[1, 2, 3]} gap={6}>
                         <GridItem href="#" thumbnail="/cv.svg" title="Portfolio personal">
-                            Plantilla creada con React + NextJS + Chakra UI + Emotion + Framer Motion.
+                            Plantilla creada con React + Next.js + Chakra UI + Emotion + Framer Motion
+                        </GridItem>
+                        <GridItem href="#" thumbnail="/blog.svg" title="Blog personal">
+                            Blog básico creado con React + Next.js + GraphQL + Tailwind
                         </GridItem>
                         <GridItem href="https://github.com/rguezque/adventure-game-basic-tutorial" thumbnail="/game.svg" title="Adventure Game">
-                            Demo b&aacute;sico de un juego 2D de aventura hecho con JS.
+                            Demo b&aacute;sico de un juego 2D de aventura hecho con Javascript.
                         </GridItem>
                         <GridItem href="https://github.com/rguezque/mozilla-theme-for-typora" thumbnail="/theme-typora.svg" title="Tema Mozilla para Typora">
                             Tema claro basado en el diseño de la web de Mozilla Developer.
@@ -88,8 +87,7 @@ export default function Home() {
                 </Box>
 
                 <Box>
-                    {/* <Heading as="h2" size="xl" fontWeight={500}><a name="experiencia">Experiencia</a></Heading> */}
-                    <Header2><a name="experiencia">Experiencia</a></Header2>
+                    <Header2><a id={sections.experiencia.name}>{sections.experiencia.title}</a></Header2>
 
                     <Row enterpriseName="Crehana Education" jobDuration="Sep 2021 - Ene 2022">
                         <b>Sales Agent</b>. Asesoría y gestión a alumnos de las membresías. Promoción y venta de los planes anuales mediante llamadas telefónicas (Call Center).
@@ -99,7 +97,7 @@ export default function Home() {
                         <b>Profesor de asignatura</b>. Clases presenciales en materias de programación y desarrollo web, asesorías a alumnos. Colaborador en desarrollo de pequeños sistemas de información locales.
                     </Row>
                     <Divider />
-                    <Row enterpriseName="SIASOFT" jobDuration="Sep 2021 - Ene 2022">
+                    <Row enterpriseName="SIASOFT" jobDuration="Ago 2018 - Oct 2018">
                         <b>Desarrollo Web</b>. Visitas a PyMEs para promoción de servicios de soporte informático y desarrollo de sitios web, así como sistemas contables.
                     </Row>
                     <Divider />
@@ -109,8 +107,7 @@ export default function Home() {
                 </Box>
 
                 <Box>
-                    {/* <Heading as="h2" size="xl" fontWeight={500}><a name="contacto">Contacto</a></Heading> */}
-                    <Header2><a name="contacto">Contacto</a></Header2>
+                    <Header2><a id={sections.contacto.name}>{sections.contacto.title}</a></Header2>
 
                     <List spacing={3}>
                         <ListItem>

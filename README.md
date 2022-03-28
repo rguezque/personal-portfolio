@@ -4,7 +4,7 @@ Creado con [React](https://reactjs.org/) + [Next.js](https://nextjs.org/) + [Cha
 
 ## Instalación
 
-Ubícate en el directorio y ejecuta en la terminal:
+Desde la terminal ubícate dentro del directorio y ejecuta:
 
 ```
 npm install

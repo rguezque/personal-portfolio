@@ -3,9 +3,9 @@ import { extendTheme } from '@chakra-ui/react'
 
 const styles = {
     global: {
-        html: {
+        /* html: {
             scrollBehavior: 'smooth'
-        },
+        }, */
         a: {
             _hover: {
                 textUnderlineOffset: 4,

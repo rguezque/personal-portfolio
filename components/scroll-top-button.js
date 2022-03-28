@@ -2,6 +2,7 @@ import { ChevronUpIcon } from '@chakra-ui/icons'
 import { Button, useColorModeValue } from '@chakra-ui/react'
 
 const ScrollTopButton = () => {
+    
     const handleClick = () => {
         window.scrollTo({
             top: 0,

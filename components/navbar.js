@@ -16,25 +16,9 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { FaLightbulb, FaBriefcase, FaPaperPlane, FaGrav } from 'react-icons/fa'
 import ThemeToggleButton from './theme-toggle-button'
+import sections from './lib/sections'
+import { Link as LinkScroll } from 'react-scroll'
 
-const sections = {
-    home: {
-        title: 'Home',
-        url: '/'
-    },
-    proyectos: {
-        title: 'Proyectos',
-        url: '/#proyectos'
-    },
-    experiencia: {
-        title: 'Experiencia',
-        url: '/#experiencia'
-    },
-    contacto: {
-        title: 'Contacto',
-        url: '/#contacto'
-    }
-}
 
 const LinkItem = ({ href, children, ...props }) => {
     return (
@@ -46,26 +30,36 @@ const LinkItem = ({ href, children, ...props }) => {
     )
 }
 
-const Navbar = props => {
+
+const Navbar = ({ ...props }) => {
+
     return (
         <Box position="relative" mb={10} pt={7} pb={7} as="nav" w="100%" bg={useColorModeValue('light', 'dark')} css={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
             <Container display="flex" maxW="container.lg" align="center" alignItems="center" justify="space-between">
                 <Flex mr={5}>
                     <LinkItem href={sections.home.url} fontSize={40}>
-                        <FaGrav/>
+                        <FaGrav />
                     </LinkItem>
                 </Flex>
 
-                <Stack direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }} >
-                    <LinkItem href={sections.proyectos.url} display="inline-flex" alignItems="center" pl={2} style={{ gap: 4 }}>
-                        {sections.proyectos.title}
-                    </LinkItem>
-                    <LinkItem href={sections.experiencia.url} display="inline-flex" alignItems="center" pl={2} style={{ gap: 4 }} >
-                        {sections.experiencia.title}
-                    </LinkItem>
-                    <LinkItem href={sections.contacto.url} display="inline-flex" alignItems="center" pl={2} style={{ gap: 4 }} >
-                        {sections.contacto.title}
-                    </LinkItem>
+                <Stack gap={3} direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }} >
+                    <LinkScroll to={sections.proyectos.name} smooth={true} delay={0} isDynamic={true}>
+                        <Link display="inline-flex" alignItems="center" style={{ gap: 4 }}>
+                            {sections.proyectos.title}
+                        </Link>
+                    </LinkScroll>
+
+                    <LinkScroll to={sections.experiencia.name} smooth={true} delay={0} isDynamic={true}>
+                        <Link display="inline-flex" alignItems="center" style={{ gap: 4 }}>
+                            {sections.experiencia.title}
+                        </Link>
+                    </LinkScroll>
+
+                    <LinkScroll to={sections.contacto.name} smooth={true} delay={0} isDynamic={true}>
+                        <Link display="inline-flex" alignItems="center" style={{ gap: 4 }}>
+                            {sections.contacto.title}
+                        </Link>
+                    </LinkScroll>
                 </Stack>
 
                 <Box flex={1} align="right" alignItems="center">
@@ -75,21 +69,21 @@ const Navbar = props => {
                         <Menu>
                             <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
                             <MenuList>
-                                <NextLink href={sections.proyectos.url} passHref>
-                                    <MenuItem as={Link} icon={<FaLightbulb />}>
+                                <LinkScroll to={sections.proyectos.name} smooth={true} delay={0} isDynamic={true}>
+                                    <MenuItem icon={<FaLightbulb />}>
                                         {sections.proyectos.title}
                                     </MenuItem>
-                                </NextLink>
-                                <NextLink href={sections.experiencia.url} passHref>
-                                    <MenuItem as={Link} icon={<FaBriefcase />}>
+                                </LinkScroll>
+                                <LinkScroll to={sections.experiencia.name} smooth={true} delay={0} isDynamic={true}>
+                                    <MenuItem icon={<FaBriefcase />}>
                                         {sections.experiencia.title}
                                     </MenuItem>
-                                </NextLink>
-                                <NextLink href={sections.contacto.url} passHref>
-                                    <MenuItem as={Link} icon={<FaPaperPlane />}>
+                                </LinkScroll>
+                                <LinkScroll to={sections.contacto.name} smooth={true} delay={0} isDynamic={true}>
+                                    <MenuItem icon={<FaPaperPlane />}>
                                         {sections.contacto.title}
                                     </MenuItem>
-                                </NextLink>
+                                </LinkScroll>
                             </MenuList>
                         </Menu>
                     </Box>
