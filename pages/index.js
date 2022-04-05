@@ -75,7 +75,7 @@ export default function Home() {
                     <Header2><a id={sections.proyectos.name}>{sections.proyectos.title}</a></Header2>
 
                     <SimpleGrid columns={[1, 2, 3]} gap={6}>
-                        <GridItem href="#" thumbnail="/cv.svg" title="Portfolio personal">
+                        <GridItem href={`${repo}/personal-portfolio`} thumbnail="/cv.svg" title="Portfolio personal">
                             Plantilla creada con React + Next.js + Chakra UI + Emotion + Framer Motion
                         </GridItem>
                         <GridItem href={`${repo}/blog-template`} thumbnail="/blog.svg" title="Blog personal">
