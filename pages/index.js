@@ -14,11 +14,13 @@ import {
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { 
+    Footer, 
     GridItem, 
     ProfilePhoto, 
     Row, 
     Header1, 
     Header2, 
+    Navbar,
     ScrollTopButton 
 } from './../components'
 import {
@@ -32,15 +34,20 @@ import sections from './../components/lib/sections'
 
 
 export default function Home() {
+    const repo = 'https://github.com/rguezque';
+
     return (
         <>
             <Head>
                 <meta name="viewport" content="width=device-width initial-scale=1"/>
                 <meta name="description" content="Portafolio personal."/>
+                <meta name="keywords" content="desarrollador web, web developer, portfolio, portafolio, react, next, javascript, php" />
                 <meta charSet="UTF-8" />
                 <title>Luis Arturo Rodríguez | Web Developer</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
+            <Navbar />
 
             <Container maxW="container.lg" >
                 <Box display={{ md: 'flex' }} mb={6}>
@@ -57,7 +64,7 @@ export default function Home() {
                         </Text>
                         <Link _hover={{ textDecoration: 'unset' }} href="/">
                             <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
-                                <Text>Download Resume</Text>
+                                <Text>Descargar Resume</Text>
                             </Button>
                         </Link>
                     </Box>
@@ -71,16 +78,16 @@ export default function Home() {
                         <GridItem href="#" thumbnail="/cv.svg" title="Portfolio personal">
                             Plantilla creada con React + Next.js + Chakra UI + Emotion + Framer Motion
                         </GridItem>
-                        <GridItem href="#" thumbnail="/blog.svg" title="Blog personal">
-                            Blog básico creado con React + Next.js + GraphQL + Tailwind
+                        <GridItem href={`${repo}/blog-template`} thumbnail="/blog.svg" title="Blog personal">
+                            Plantilla de un blog básico creado con React + Next.js + GraphQL + Tailwind
                         </GridItem>
-                        <GridItem href="https://github.com/rguezque/adventure-game-basic-tutorial" thumbnail="/game.svg" title="Adventure Game">
+                        <GridItem href={`${repo}/adventure-game-basic-tutorial`} thumbnail="/game.svg" title="Adventure Game">
                             Demo b&aacute;sico de un juego 2D de aventura hecho con Javascript.
                         </GridItem>
-                        <GridItem href="https://github.com/rguezque/mozilla-theme-for-typora" thumbnail="/theme-typora.svg" title="Tema Mozilla para Typora">
-                            Tema claro basado en el diseño de la web de Mozilla Developer.
+                        <GridItem href={`${repo}/mozilla-theme-for-typora`} thumbnail="/theme-typora.svg" title="Tema Mozilla para Typora">
+                            Tema claro, basado en el diseño de la web de Mozilla Developer.
                         </GridItem>
-                        <GridItem href="https://github.com/rguezque/route" thumbnail="/route.svg" title="Route">
+                        <GridItem href={`${repo}/route`} thumbnail="/route.svg" title="Route">
                             Un router PHP hecho como una pr&aacute;ctica personal.
                         </GridItem>
                     </SimpleGrid>
@@ -134,6 +141,8 @@ export default function Home() {
                 </Box>
 
             </Container>
+
+            <Footer />
         </>
     )
 }

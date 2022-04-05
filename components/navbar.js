@@ -11,6 +11,7 @@ import {
     IconButton,
     useColorModeValue,
     Flex,
+    Text,
 
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -36,10 +37,11 @@ const Navbar = ({ ...props }) => {
     return (
         <Box position="relative" mb={10} pt={7} pb={7} as="nav" w="100%" bg={useColorModeValue('light', 'dark')} css={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
             <Container display="flex" maxW="container.lg" align="center" alignItems="center" justify="space-between">
-                <Flex mr={5}>
-                    <LinkItem href={sections.home.url} fontSize={40}>
-                        <FaGrav />
-                    </LinkItem>
+                <Flex mr={5} gap={3} alignItems="center">
+                    <Text fontSize={40} gap={3}>
+                        <FaGrav /> 
+                    </Text>
+                    <Text display={{ base: 'inline-block', md: 'none' }}>Portfolio personal</Text>
                 </Flex>
 
                 <Stack gap={3} direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }} >
@@ -60,6 +62,7 @@ const Navbar = ({ ...props }) => {
                             {sections.contacto.title}
                         </Link>
                     </LinkScroll>
+
                 </Stack>
 
                 <Box flex={1} align="right" alignItems="center">

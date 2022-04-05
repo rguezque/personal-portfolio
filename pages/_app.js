@@ -1,9 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { 
     Fonts, 
-    Footer, 
     Layout, 
-    Navbar, 
     theme
 } from './../components'
 
@@ -12,9 +10,9 @@ const MyPortfolio = ({ Component, pageProps }) => {
         <ChakraProvider theme={theme}>
             <Layout>
                 <Fonts />
-                <Navbar />
+                {/* <Navbar/> */}
                 <Component {...pageProps} />
-                <Footer />
+                {/* <Footer /> */}
             </Layout>
         </ChakraProvider>
     )

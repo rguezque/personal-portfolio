@@ -9,7 +9,7 @@ const GridItem = ({ children, href, title, thumbnail }) => {
                     {title}
                 </Text>
             </LinkOverlay>
-            <Text fontSize={[14, 16]}>{children}</Text>
+            <Text fontSize={[12, 14, 16]}>{children}</Text>
         </LinkBox>
     </Box>
 }

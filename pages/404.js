@@ -12,7 +12,7 @@ const NotFound = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Center width={'100vw'} height="auto">
+            <Center width="100vw" height="100vh" alignItems="center" >
                 <Box display="inline" align="center">
                     <p mb={0}>P&aacute;gina solicitada</p>
                     <Heading as="h1" size="3xl" fontWeight={300} mt={2}>
