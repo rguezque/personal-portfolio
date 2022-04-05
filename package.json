@@ -1,7 +1,7 @@
 {
     "name": "personal-portfolio",
     "version": "1.0.0",
-    "description": "Next.js personal portfolio template",
+    "description": "Personal portfolio template made with Next.js",
     "author": "Luis Arturo Rodriguez <rguezque@gmail.com>",
     "homepage": "www.github.com/rguezque",
     "private": true,
