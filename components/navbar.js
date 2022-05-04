@@ -2,7 +2,6 @@ import NextLink from 'next/link'
 import {
     Container,
     Box,
-    Link,
     Stack,
     Menu,
     MenuItem,
@@ -21,17 +20,6 @@ import sections from './lib/sections'
 import { Link as LinkScroll } from 'react-scroll'
 
 
-const LinkItem = ({ href, children, ...props }) => {
-    return (
-        <NextLink href={href} >
-            <Link {...props}>
-                {children}
-            </Link>
-        </NextLink>
-    )
-}
-
-
 const Navbar = ({ ...props }) => {
 
     return (
@@ -46,21 +34,15 @@ const Navbar = ({ ...props }) => {
 
                 <Stack gap={3} direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }} >
                     <LinkScroll to={sections.proyectos.name} smooth={true} delay={0} isDynamic={true}>
-                        <Link display="inline-flex" alignItems="center" style={{ gap: 4 }}>
-                            {sections.proyectos.title}
-                        </Link>
+                        <Text cursor="pointer" _hover={{ textDecoration: 'underline' }}>{sections.proyectos.title}</Text>
                     </LinkScroll>
 
                     <LinkScroll to={sections.experiencia.name} smooth={true} delay={0} isDynamic={true}>
-                        <Link display="inline-flex" alignItems="center" style={{ gap: 4 }}>
-                            {sections.experiencia.title}
-                        </Link>
+                        <Text cursor="pointer" _hover={{ textDecoration: 'underline' }}>{sections.experiencia.title}</Text>
                     </LinkScroll>
 
                     <LinkScroll to={sections.contacto.name} smooth={true} delay={0} isDynamic={true}>
-                        <Link display="inline-flex" alignItems="center" style={{ gap: 4 }}>
-                            {sections.contacto.title}
-                        </Link>
+                        <Text cursor="pointer" _hover={{ textDecoration: 'underline' }}>{sections.contacto.title}</Text>
                     </LinkScroll>
 
                 </Stack>

@@ -2,7 +2,7 @@ import { Box, Stack, Text } from '@chakra-ui/react'
 
 const Row = ({ children, enterpriseName, jobDuration}) => {
     return (
-        <Stack mt={5} mb={5} direction={['column', 'row']} spacing='4%' display="flex">
+        <Stack mt={5} mb={5} direction={['column', 'row']} spacing='4%' display="flex" isInline={true}>
             <Box w="30%">
                 <Text m={0} fontWeight={600}>
                     { enterpriseName }
