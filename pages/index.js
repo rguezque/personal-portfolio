@@ -57,12 +57,12 @@ export default function Home() {
                         <Heading fontSize={{ base: 30, md: 35, xl: 40 }} fontWeight={200} mt={{ base: 4, md: 6 }} mb={0} pb={0}>Hola, soy</Heading>
                         <Header1 mt={2} mb={2}>Luis Arturo Rodr&iacute;guez</Header1>
                         <Text fontWeight={600} fontSize={{ base: 17, md: 20 }}>
-                            Web Developer
+                            Web Developer Jr.
                         </Text>
                         <Text>
                             Desarrollador web, en proceso de aprendizaje con <b>Next.js</b>. Experiencia previa en <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aunque estuve alejado de la programación un tiempo, aprendo con rapidez nuevos conocimientos.
                         </Text>
-                        <Link _hover={{ textDecoration: 'unset' }} href="/">
+                        <Link isExternal _hover={{ textDecoration: 'unset' }} href="/cv_luis_arturo.pdf">
                             <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
                                 <Text>Descargar Resume</Text>
                             </Button>
