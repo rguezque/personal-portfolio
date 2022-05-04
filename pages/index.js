@@ -40,11 +40,11 @@ export default function Home() {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width initial-scale=1"/>
-                <meta name="description" content="Portafolio personal."/>
-                <meta name="keywords" content="desarrollador web, web developer, portfolio, portafolio, react, next, javascript, php" />
+                <meta name="description" content="Portafolio personal. Next.js, PHP, CSS, HTML, Git y MySQL"/>
+                <meta name="keywords" content="luis arturo rodriguez, desarrollador web, web developer, react, next, javascript, php, portfolio, portafolio" />
                 <meta charSet="UTF-8" />
-                <title>Luis Arturo Rodríguez | Web Developer</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>Luis Arturo Rodríguez | Web Developer Jr</title>
+                <link rel="icon" href="favicon.ico" />
             </Head>
 
             <Navbar />
