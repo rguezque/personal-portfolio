@@ -16,7 +16,7 @@ const ProfilePhoto = ({ ...props }) => {
                 minWidth="100px" 
                 display="inline-block" 
                 borderRadius="full" 
-                src="/rguezque.png" 
+                src="rguezque.png" 
                 alt="Profile photo" 
             />
         </Box>

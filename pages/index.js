@@ -62,7 +62,7 @@ export default function Home() {
                         <Text>
                             Desarrollador web, en proceso de aprendizaje con <b>Next.js</b>. Experiencia previa en <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aunque estuve alejado de la programación un tiempo, aprendo con rapidez nuevos conocimientos.
                         </Text>
-                        <Link isExternal _hover={{ textDecoration: 'unset' }} href="/cv_luis_arturo.pdf">
+                        <Link isExternal _hover={{ textDecoration: 'unset' }} href="cv_luis_arturo.pdf">
                             <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
                                 <Text>Descargar Resume</Text>
                             </Button>
@@ -72,29 +72,29 @@ export default function Home() {
                 </Box>
 
                 <Box>
-                    <Header2><a id={sections.proyectos.name}>{sections.proyectos.title}</a></Header2>
+                    <Header2 id={sections.proyectos.name}>{sections.proyectos.title}</Header2>
 
                     <SimpleGrid columns={[1, 2, 3]} gap={6}>
-                        <GridItem href={`${repo}/personal-portfolio`} thumbnail="/cv.svg" title="Portfolio personal">
+                        <GridItem href={`${repo}/personal-portfolio`} thumbnail="cv.svg" title="Portfolio personal">
                             Plantilla creada con React + Next.js + Chakra UI + Emotion + Framer Motion
                         </GridItem>
-                        <GridItem href={`${repo}/blog-template`} thumbnail="/blog.svg" title="Blog personal">
+                        <GridItem href={`${repo}/blog-template`} thumbnail="blog.svg" title="Blog personal">
                             Plantilla de un blog básico creado con React + Next.js + GraphQL + Tailwind
                         </GridItem>
-                        <GridItem href={`${repo}/adventure-game-basic-tutorial`} thumbnail="/game.svg" title="Adventure Game">
+                        <GridItem href={`${repo}/adventure-game-basic-tutorial`} thumbnail="game.svg" title="Adventure Game">
                             Demo b&aacute;sico de un juego 2D de aventura hecho con Javascript.
                         </GridItem>
-                        <GridItem href={`${repo}/mozilla-theme-for-typora`} thumbnail="/theme-typora.svg" title="Tema Mozilla para Typora">
+                        <GridItem href={`${repo}/mozilla-theme-for-typora`} thumbnail="theme-typora.svg" title="Tema Mozilla para Typora">
                             Tema claro, basado en el diseño de la web de Mozilla Developer.
                         </GridItem>
-                        <GridItem href={`${repo}/route`} thumbnail="/route.svg" title="Route">
+                        <GridItem href={`${repo}/route`} thumbnail="route.svg" title="Route">
                             Un router PHP hecho como una pr&aacute;ctica personal.
                         </GridItem>
                     </SimpleGrid>
                 </Box>
 
                 <Box>
-                    <Header2><a id={sections.experiencia.name}>{sections.experiencia.title}</a></Header2>
+                    <Header2 id={sections.experiencia.name}>{sections.experiencia.title}</Header2>
 
                     <Row enterpriseName="Crehana Education" jobDuration="Sep 2021 - Ene 2022">
                         <b>Sales Agent</b>. Asesoría y gestión a alumnos de las membresías. Promoción y venta de los planes anuales mediante llamadas telefónicas (Call Center).
@@ -114,7 +114,7 @@ export default function Home() {
                 </Box>
 
                 <Box>
-                    <Header2><a id={sections.contacto.name}>{sections.contacto.title}</a></Header2>
+                    <Header2 id={sections.contacto.name}>{sections.contacto.title}</Header2>
 
                     <List spacing={3}>
                         <ListItem>
