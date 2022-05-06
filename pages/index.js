@@ -60,7 +60,7 @@ export default function Home() {
                             Web Developer Jr.
                         </Text>
                         <Text>
-                            Desarrollador web, en proceso de aprendizaje con <b>Next.js</b>. Experiencia previa en <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aunque estuve alejado de la programación un tiempo, aprendo con rapidez nuevos conocimientos.
+                            Desarrollador web, en proceso de aprendizaje con <b>Next.js</b>. Experiencia previa en <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aprendo con rapidez nuevos conocimientos.
                         </Text>
                         <Link isExternal _hover={{ textDecoration: 'unset' }} href="cv_luis_arturo.pdf">
                             <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
