@@ -40,8 +40,8 @@ export default function Home() {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width initial-scale=1"/>
-                <meta name="description" content="Portafolio personal. Next.js, PHP, CSS, HTML, Git y MySQL"/>
-                <meta name="keywords" content="luis arturo rodriguez, desarrollador web, web developer, react, next, javascript, php, portfolio, portafolio" />
+                <meta name="description" content="Portafolio personal. Experiencia con Next.js, PHP, CSS, HTML, Javascript, Git y MySQL"/>
+                <meta name="keywords" content="luis arturo rodriguez, desarrollador web jr, web developer jr, next.js developer, php, javascript" />
                 <meta charSet="UTF-8" />
                 <title>Luis Arturo Rodríguez | Web Developer Jr</title>
                 <link rel="icon" href="favicon.ico" />
@@ -62,7 +62,7 @@ export default function Home() {
                         <Text>
                             Desarrollador web, en proceso de aprendizaje con <b>Next.js</b>. Experiencia previa en <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aprendo con rapidez nuevos conocimientos.
                         </Text>
-                        <Link isExternal _hover={{ textDecoration: 'unset' }} href="cv_luis_arturo.pdf">
+                        <Link isExternal _hover={{ textDecoration: 'unset' }} href="https://drive.google.com/file/d/1WWnbJhMmyn1VaIsQRRYNSFVCNvZ9fGVw/view?usp=sharing" download>
                             <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
                                 <Text>Descargar Resume</Text>
                             </Button>
