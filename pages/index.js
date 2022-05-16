@@ -13,15 +13,15 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import { 
-    Footer, 
-    GridItem, 
-    ProfilePhoto, 
-    Row, 
-    Header1, 
-    Header2, 
+import {
+    Footer,
+    GridItem,
+    ProfilePhoto,
+    Row,
+    Header1,
+    Header2,
     Navbar,
-    ScrollTopButton 
+    ScrollTopButton
 } from './../components'
 import {
     FaDownload,
@@ -39,8 +39,8 @@ export default function Home() {
     return (
         <>
             <Head>
-                <meta name="viewport" content="width=device-width initial-scale=1"/>
-                <meta name="description" content="Portafolio personal. Next.js, PHP, CSS, HTML, Javascript, Git y MySQL"/>
+                <meta name="viewport" content="width=device-width initial-scale=1" />
+                <meta name="description" content="Portafolio personal. Next.js, PHP, CSS, HTML, Javascript, Git y MySQL" />
                 <meta name="keywords" content="desarrollador web jr, web developer jr, next.js developer, php, javascript" />
                 <meta charSet="UTF-8" />
                 <title>Luis Arturo Rodríguez | Web Developer Jr</title>
@@ -51,7 +51,7 @@ export default function Home() {
 
             <Container maxW="container.lg" >
                 <Box display={{ md: 'flex' }} mb={6}>
-                    <ProfilePhoto align="center" order={2}/>
+                    <ProfilePhoto align="center" order={2} />
 
                     <Box flexGrow={1} order={1}>
                         <Heading fontSize={{ base: 30, md: 35, xl: 40 }} fontWeight={200} mt={{ base: 4, md: 6 }} mb={0} pb={0}>Hola, soy</Heading>
@@ -68,7 +68,7 @@ export default function Home() {
                             </Button>
                         </Link>
                     </Box>
-                    
+
                 </Box>
 
                 <Box>
@@ -107,12 +107,13 @@ export default function Home() {
                     <Row enterpriseName="SIASOFT" jobDuration="Ago 2018 - Oct 2018">
                         <b>Desarrollo Web</b>. Mantenimiento del sitio web de la empresa con HTML+CSS+JQuery. Visitas a PyMEs para promoción de servicios de soporte informático y desarrollo de sitios web, así como sistemas contables.
                     </Row>
+                    <Divider />
                     <Row enterpriseName="Universidad Ju&aacute;rez Aut&oacute;noma de Tabasco" jobDuration="Jul 2014 - Jul 2018">
                         <b>Profesor asistente</b>. Colaborar en investigaciones académicas de un catedrático doctor, así como profesorado y asesoría a los alumnos, desarrollo de pequeños sistemas de información PHP+MySQL como parte de algunos proyectos de investigación
                     </Row>
                     <Divider />
                     <Row enterpriseName="Universidad Polit&eacute;cnica Mesoamericana" jobDuration="Sep 2013 - May 2014">
-                    <b>Profesor de asignatura</b>. Clases presenciales en materias de programación en la modalidad escolarizada y semi-escolarizada a alumnos de M&eacute;xico y Guatemala.
+                        <b>Profesor de asignatura</b>. Clases presenciales en materias de programación en la modalidad escolarizada y semi-escolarizada a alumnos de M&eacute;xico y Guatemala.
                     </Row>
                 </Box>
 
