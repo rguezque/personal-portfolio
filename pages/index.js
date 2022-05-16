@@ -40,8 +40,8 @@ export default function Home() {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width initial-scale=1"/>
-                <meta name="description" content="Portafolio personal. Experiencia con Next.js, PHP, CSS, HTML, Javascript, Git y MySQL"/>
-                <meta name="keywords" content="luis arturo rodriguez, desarrollador web jr, web developer jr, next.js developer, php, javascript" />
+                <meta name="description" content="Portafolio personal. Next.js, PHP, CSS, HTML, Javascript, Git y MySQL"/>
+                <meta name="keywords" content="desarrollador web jr, web developer jr, next.js developer, php, javascript" />
                 <meta charSet="UTF-8" />
                 <title>Luis Arturo Rodríguez | Web Developer Jr</title>
                 <link rel="icon" href="favicon.ico" />
@@ -97,15 +97,18 @@ export default function Home() {
                     <Header2 id={sections.experiencia.name}>{sections.experiencia.title}</Header2>
 
                     <Row enterpriseName="Crehana Education" jobDuration="Sep 2021 - Ene 2022">
-                        <b>Sales Agent</b>. Asesoría y gestión a alumnos de las membresías. Promoción y venta de los planes anuales mediante llamadas telefónicas (Call Center).
+                        <b>Sales Agent</b>. Promoción y venta de las membresías anuales mediante llamadas telefónicas (Call Center). Asesoría y gestión a alumnos de las membresías, dudas sobre mentorías, referidos, renovaciones y pagos.
                     </Row>
                     <Divider />
                     <Row enterpriseName="Universidad Ju&aacute;rez Aut&oacute;noma de Tabasco" jobDuration="Feb 2019 - Sep 2020">
-                        <b>Profesor de asignatura</b>. Clases presenciales en materias de programación y desarrollo web, asesorías a alumnos. Colaborador en desarrollo de pequeños sistemas de información locales.
+                        <b>Profesor de asignatura</b>. Clases presenciales en materias de programación y desarrollo web (PHP, HTML, CSS, Javascript, MySQL, Git), asesorías a alumnos. Colaborador en desarrollo de pequeños sistemas de información locales.
                     </Row>
                     <Divider />
                     <Row enterpriseName="SIASOFT" jobDuration="Ago 2018 - Oct 2018">
-                        <b>Desarrollo Web</b>. Visitas a PyMEs para promoción de servicios de soporte informático y desarrollo de sitios web, así como sistemas contables.
+                        <b>Desarrollo Web</b>. Mantenimiento del sitio web de la empresa con HTML+CSS+JQuery. Visitas a PyMEs para promoción de servicios de soporte informático y desarrollo de sitios web, así como sistemas contables.
+                    </Row>
+                    <Row enterpriseName="Universidad Ju&aacute;rez Aut&oacute;noma de Tabasco" jobDuration="Jul 2014 - Jul 2018">
+                        <b>Profesor asistente</b>. Colaborar en investigaciones académicas de un catedrático doctor, así como profesorado y asesoría a los alumnos, desarrollo de pequeños sistemas de información PHP+MySQL como parte de algunos proyectos de investigación
                     </Row>
                     <Divider />
                     <Row enterpriseName="Universidad Polit&eacute;cnica Mesoamericana" jobDuration="Sep 2013 - May 2014">
