@@ -31,10 +31,11 @@ import {
     FaTwitter
 } from 'react-icons/fa'
 import sections from './../components/lib/sections'
-
+import experience from '../components/lib/experience'
+import projects from '../components/lib/projects'
 
 export default function Home() {
-    const repo = 'https://github.com/rguezque';
+    const githubAccount = 'https://github.com/rguezque';
 
     return (
         <>
@@ -75,46 +76,35 @@ export default function Home() {
                     <Header2 id={sections.proyectos.name}>{sections.proyectos.title}</Header2>
 
                     <SimpleGrid columns={[1, 2, 3]} gap={6}>
-                        <GridItem href={`${repo}/personal-portfolio`} thumbnail="cv.svg" title="Portfolio personal">
-                            Plantilla creada con React + Next.js + Chakra UI + Emotion + Framer Motion
-                        </GridItem>
-                        <GridItem href={`${repo}/blog-template`} thumbnail="blog.svg" title="Blog personal">
-                            Plantilla de un blog básico creado con React + Next.js + GraphQL + Tailwind
-                        </GridItem>
-                        <GridItem href={`${repo}/adventure-game-basic-tutorial`} thumbnail="game.svg" title="Adventure Game">
-                            Demo b&aacute;sico de un juego 2D de aventura hecho con Javascript.
-                        </GridItem>
-                        <GridItem href={`${repo}/mozilla-theme-for-typora`} thumbnail="theme-typora.svg" title="Tema Mozilla para Typora">
-                            Tema claro, basado en el diseño de la web de Mozilla Developer.
-                        </GridItem>
-                        <GridItem href={`${repo}/route`} thumbnail="route.svg" title="Route">
-                            Un router PHP hecho como una pr&aacute;ctica personal.
-                        </GridItem>
+                        {
+                            projects.map(project => (
+                                <GridItem href={`${githubAccount}${project.repo}`} thumbnail={project.thumbnail} title={project.title}>
+                                    {project.description}
+                                </GridItem>
+                            ))
+                        }
                     </SimpleGrid>
                 </Box>
 
                 <Box>
                     <Header2 id={sections.experiencia.name}>{sections.experiencia.title}</Header2>
 
-                    <Row enterpriseName="Crehana Education" jobDuration="Sep 2021 - Ene 2022">
-                        <b>Sales Agent</b>. Promoción y venta de las membresías anuales mediante llamadas telefónicas (Call Center). Asesoría y gestión a alumnos de las membresías, dudas sobre mentorías, referidos, renovaciones y pagos.
-                    </Row>
-                    <Divider />
-                    <Row enterpriseName="Universidad Ju&aacute;rez Aut&oacute;noma de Tabasco" jobDuration="Feb 2019 - Sep 2020">
-                        <b>Profesor de asignatura</b>. Clases presenciales en materias de programación y desarrollo web (PHP, HTML, CSS, Javascript, MySQL, Git), asesorías a alumnos. Colaborador en desarrollo de pequeños sistemas de información locales.
-                    </Row>
-                    <Divider />
-                    <Row enterpriseName="SIASOFT" jobDuration="Ago 2018 - Oct 2018">
-                        <b>Desarrollo Web</b>. Mantenimiento del sitio web de la empresa con HTML+CSS+JQuery. Visitas a PyMEs para promoción de servicios de soporte informático y desarrollo de sitios web, así como sistemas contables.
-                    </Row>
-                    <Divider />
-                    <Row enterpriseName="Universidad Ju&aacute;rez Aut&oacute;noma de Tabasco" jobDuration="Jul 2014 - Jul 2018">
-                        <b>Profesor asistente</b>. Colaborar en investigaciones académicas de un catedrático doctor, así como profesorado y asesoría a los alumnos, desarrollo de pequeños sistemas de información PHP+MySQL como parte de algunos proyectos de investigación
-                    </Row>
-                    <Divider />
-                    <Row enterpriseName="Universidad Polit&eacute;cnica Mesoamericana" jobDuration="Sep 2013 - May 2014">
-                        <b>Profesor de asignatura</b>. Clases presenciales en materias de programación en la modalidad escolarizada y semi-escolarizada a alumnos de M&eacute;xico y Guatemala.
-                    </Row>
+                    {
+                        experience.map((entry, index) => (
+                            <>
+                                <Row enterpriseName={entry.enterpriseName.toString()} jobDuration={entry.jobDuration}>
+                                    <b>{entry.position}</b>. {entry.description}
+                                </Row>
+                                {/* Divider */}
+                                {
+                                    index < experience.length - 1 ?
+                                        <Divider />
+                                        : null
+                                }
+                            </>
+                        ))
+                    }
+
                 </Box>
 
                 <Box>
