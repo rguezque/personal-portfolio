@@ -48,9 +48,9 @@ export default function Home() {
                 <link rel="icon" href="favicon.ico" />
             </Head>
 
-            <Navbar />
+            <Navbar/>
 
-            <Container maxW="container.lg" >
+            <Container maxW="container.lg">
                 <Box display={{ md: 'flex' }} mb={6}>
                     <ProfilePhoto align="center" order={2} />
 
@@ -77,8 +77,8 @@ export default function Home() {
 
                     <SimpleGrid columns={[1, 2, 3]} gap={6}>
                         {
-                            projects.map(project => (
-                                <GridItem href={`${githubAccount}${project.repo}`} thumbnail={project.thumbnail} title={project.title}>
+                            projects.map((project, index) => (
+                                <GridItem href={`${githubAccount}${project.repo}`} thumbnail={project.thumbnail} title={project.title} key={index}>
                                     {project.description}
                                 </GridItem>
                             ))
@@ -91,17 +91,17 @@ export default function Home() {
 
                     {
                         experience.map((entry, index) => (
-                            <>
+                            <div key={index}>
                                 <Row enterpriseName={entry.enterpriseName.toString()} jobDuration={entry.jobDuration}>
                                     <b>{entry.position}</b>. {entry.description}
                                 </Row>
                                 {/* Divider */}
                                 {
                                     index < experience.length - 1 ?
-                                        <Divider />
+                                        <Divider/>
                                         : null
                                 }
-                            </>
+                            </div>
                         ))
                     }
 

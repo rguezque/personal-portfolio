@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+//import NextLink from 'next/link'
 import {
     Container,
     Box,
@@ -23,7 +23,7 @@ import { Link as LinkScroll } from 'react-scroll'
 const Navbar = ({ ...props }) => {
 
     return (
-        <Box position="relative" mb={10} pt={7} pb={7} as="nav" w="100%" bg={useColorModeValue('light', 'dark')} css={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
+        <Box position="relative" mb={10} pt={7} pb={7} as="nav" w="100%" bg={useColorModeValue('light', 'dark')} css={{ backdropFilter: 'blur(10px)' }} zIndex={10} {...props}>
             <Container display="flex" maxW="container.lg" align="center" alignItems="center" justify="space-between">
                 <Flex mr={5} gap={3} alignItems="center">
                     <Text fontSize={40} gap={3}>
