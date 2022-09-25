@@ -3,7 +3,7 @@ const nextConfig = {
     reactStrictMode: true,
     images: {
         loader: "akamai",
-        path: ""
+        path: "."
     },
     basePath: "/personal-portfolio", // Comment this for local test
     assetPrefix: "/personal-portfolio" // Comment this for local test
