@@ -14,7 +14,7 @@ import {
 
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { FaLightbulb, FaBriefcase, FaPaperPlane, FaGrav } from 'react-icons/fa'
+import { FaLightbulb, FaBriefcase, FaPaperPlane, FaUserAstronaut } from 'react-icons/fa'
 import ThemeToggleButton from './theme-toggle-button'
 import sections from './lib/sections'
 import { Link as LinkScroll } from 'react-scroll'
@@ -27,7 +27,7 @@ const Navbar = ({ ...props }) => {
             <Container display="flex" maxW="container.lg" align="center" alignItems="center" justify="space-between">
                 <Flex mr={5} gap={3} alignItems="center">
                     <Text fontSize={40} gap={3}>
-                        <FaGrav /> 
+                        <FaUserAstronaut /> 
                     </Text>
                     <Text display={{ base: 'inline-block', md: 'none' }}>Portfolio personal</Text>
                 </Flex>
