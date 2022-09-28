@@ -26,7 +26,7 @@ const Navbar = ({ ...props }) => {
         <Box position="relative" mb={10} pt={7} pb={7} as="nav" w="100%" bg={useColorModeValue('light', 'dark')} css={{ backdropFilter: 'blur(10px)' }} zIndex={10} {...props}>
             <Container display="flex" maxW="container.lg" align="center" alignItems="center" justify="space-between">
                 <Flex mr={5} gap={3} alignItems="center">
-                    <Text fontSize={40} gap={3}>
+                    <Text fontSize={{sm:33, md: 40}} gap={3}>
                         <FaUserAstronaut /> 
                     </Text>
                     <Text display={{ base: 'inline-block', md: 'none' }}>Portfolio personal</Text>
