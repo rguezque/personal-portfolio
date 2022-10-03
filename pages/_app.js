@@ -9,10 +9,8 @@ const MyPortfolio = ({ Component, pageProps }) => {
     return (
         <ChakraProvider theme={theme}>
             <Layout>
-                <Fonts />
-                {/* <Navbar/> */}
+                <Fonts/>
                 <Component {...pageProps} />
-                {/* <Footer /> */}
             </Layout>
         </ChakraProvider>
     )

@@ -12,7 +12,7 @@ const ScrollTopButton = () => {
     }
 
     return (
-        <Button onClick={handleClick} as="button" bg={useColorModeValue('orange', 'purple')} borderRadius="full" align="center" alignItems="center" h={10} w={10} mt={10} title="Scroll top"><ChevronUpIcon/></Button>
+        <Button onClick={handleClick} as="button" colorScheme={useColorModeValue('purple', 'orange')} borderRadius="full" align="center" alignItems="center" h={10} w={10} mt={10} title="Scroll top"><ChevronUpIcon/></Button>
     )
 }
 

@@ -24,7 +24,7 @@ import {
     ScrollTopButton
 } from './../components'
 import {
-    FaDownload,
+    FaFileAlt,
     FaGithub,
     FaGoogle,
     FaLinkedin,
@@ -64,8 +64,8 @@ export default function Home() {
                             Conocimientos de <b>Next.js</b>, <b>PHP</b>, MySQL, HTML, CSS, Javascript, Git. He ejercido la docencia como profesor en dos universidades y tambi&eacute;n he estado en atención a clientes y ventas. Con entusiasmo de formar parte de un productivo y exitoso equipo. Aprendo con rapidez nuevos conocimientos.
                         </Text>
                         <Link isExternal _hover={{ textDecoration: 'unset' }} href="https://drive.google.com/file/d/1WWnbJhMmyn1VaIsQRRYNSFVCNvZ9fGVw/view?usp=sharing" download>
-                            <Button bg={useColorModeValue('orange', 'purple')} leftIcon={<FaDownload />}>
-                                <Text>Descargar Resume</Text>
+                            <Button size={{base: 'md', sm:'md', md:'md', lg:'lg'}} colorScheme={useColorModeValue('purple', 'orange')} leftIcon={<FaFileAlt />}>
+                                <Text>Descargar Curriculum</Text>
                             </Button>
                         </Link>
                     </Box>
@@ -78,7 +78,7 @@ export default function Home() {
                     <SimpleGrid columns={[1, 2, 3]} gap={6}>
                         {
                             projects.map((project, index) => (
-                                <GridItem href={`${githubAccount}${project.repo}`} thumbnail={project.thumbnail} title={project.title} key={index}>
+                                <GridItem href={`${githubAccount}${project.repo}`} thumbnail={`${project.thumbnail}${useColorModeValue('purple', 'orange')}.svg`} title={project.title} key={index}>
                                     {project.description}
                                 </GridItem>
                             ))

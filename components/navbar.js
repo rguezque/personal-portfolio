@@ -1,4 +1,4 @@
-//import NextLink from 'next/link'
+import NextLink from 'next/link'
 import {
     Container,
     Box,
@@ -11,7 +11,6 @@ import {
     useColorModeValue,
     Flex,
     Text,
-
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { FaLightbulb, FaBriefcase, FaPaperPlane, FaUserAstronaut } from 'react-icons/fa'
@@ -19,6 +18,13 @@ import ThemeToggleButton from './theme-toggle-button'
 import sections from './lib/sections'
 import { Link as LinkScroll } from 'react-scroll'
 
+const LinkItem = ({ to, children, ...props }) => {
+    return (
+        <LinkScroll to={to} smooth={true} delay={0} isDynamic={true} {...props}>
+            { children }
+        </LinkScroll>
+    )
+}
 
 const Navbar = ({ ...props }) => {
 
@@ -29,21 +35,21 @@ const Navbar = ({ ...props }) => {
                     <Text fontSize={{sm:33, md: 40}} gap={3}>
                         <FaUserAstronaut /> 
                     </Text>
-                    <Text display={{ base: 'inline-block', md: 'none' }}>Portfolio personal</Text>
+                    <Text display={{ base: 'inline-block', md: 'none' }} fontWeight={700} fontSize='md'>Portfolio personal</Text>
                 </Flex>
 
                 <Stack gap={3} direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }} >
-                    <LinkScroll to={sections.proyectos.name} smooth={true} delay={0} isDynamic={true}>
-                        <Text cursor="pointer" _hover={{ textDecoration: 'underline' }}>{sections.proyectos.title}</Text>
-                    </LinkScroll>
+                    <LinkItem to={sections.proyectos.name}>
+                        <Text className='navbar-item'>{sections.proyectos.title}</Text>
+                    </LinkItem>
 
-                    <LinkScroll to={sections.experiencia.name} smooth={true} delay={0} isDynamic={true}>
-                        <Text cursor="pointer" _hover={{ textDecoration: 'underline' }}>{sections.experiencia.title}</Text>
-                    </LinkScroll>
+                    <LinkItem to={sections.experiencia.name}>
+                        <Text className='navbar-item'>{sections.experiencia.title}</Text>
+                    </LinkItem>
 
-                    <LinkScroll to={sections.contacto.name} smooth={true} delay={0} isDynamic={true}>
-                        <Text cursor="pointer" _hover={{ textDecoration: 'underline' }}>{sections.contacto.title}</Text>
-                    </LinkScroll>
+                    <LinkItem to={sections.contacto.name}>
+                        <Text className='navbar-item'>{sections.contacto.title}</Text>
+                    </LinkItem>
 
                 </Stack>
 
@@ -54,21 +60,21 @@ const Navbar = ({ ...props }) => {
                         <Menu>
                             <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
                             <MenuList>
-                                <LinkScroll to={sections.proyectos.name} smooth={true} delay={0} isDynamic={true}>
+                                <LinkItem to={sections.proyectos.name}>
                                     <MenuItem icon={<FaLightbulb />}>
                                         {sections.proyectos.title}
                                     </MenuItem>
-                                </LinkScroll>
-                                <LinkScroll to={sections.experiencia.name} smooth={true} delay={0} isDynamic={true}>
+                                </LinkItem>
+                                <LinkItem to={sections.experiencia.name}>
                                     <MenuItem icon={<FaBriefcase />}>
                                         {sections.experiencia.title}
                                     </MenuItem>
-                                </LinkScroll>
-                                <LinkScroll to={sections.contacto.name} smooth={true} delay={0} isDynamic={true}>
+                                </LinkItem>
+                                <LinkItem to={sections.contacto.name}>
                                     <MenuItem icon={<FaPaperPlane />}>
                                         {sections.contacto.title}
                                     </MenuItem>
-                                </LinkScroll>
+                                </LinkItem>
                             </MenuList>
                         </Menu>
                     </Box>
